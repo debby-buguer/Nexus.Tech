@@ -1,0 +1,94 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+    margin: 0px;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "topo topo"
+    "menulateral conteudo"
+    "rodape rodape";
+    grid-template-columns: 250px auto;
+    grid-template-rows: 125px 1fr 50px;
+    height: 100vh;
+}
+.topo{
+    grid-area: topo;
+    background-color: black;
+}
+.menulateral{
+    grid-area: menulateral;
+    background-color: white;
+}
+.conteudo{
+    grid-area: conteudo;
+    background-color: rgb(230, 230, 230);
+}
+.rodape{
+    grid-area: rodape;
+    background-color: black;
+}
+.image{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 200px;
+    left: 50px;
+    bottom: -20px;
+}
+.image img{
+    height: 80px;
+    width: 200px;
+}
+.image img:hover{
+    transition: 0.3s ease;
+    transform: scale(1.02);
+}
+.image img:active{
+    transition: 0.3s ease;
+    transform: scale(0.99);
+}
+.top{
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    top: 45px;
+}
+.rodape a{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20%;
+    font-size: large;
+    text-decoration: none;
+    color: aqua;
+}
+.lista a{text-decoration: none;
+        color: rgb(0, 180, 180);}
+.lista li{margin: 10px;}
+.lista{
+    position: absolute;
+    left: 30px;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+.lista li:hover{
+    transition: 0.3s ease;
+    transform: scale(1.4);
+}
+.title{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 50px;
+    color: darkblue;
+}
+.conteudo p{
+    text-indent: 1em;
+    margin: 50px;
+}
