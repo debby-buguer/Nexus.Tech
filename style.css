@@ -1,5 +1,5 @@
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0px;
 }
 .container{
@@ -8,13 +8,17 @@ body{
     "topo topo"
     "menulateral conteudo"
     "rodape rodape";
-    grid-template-columns: 250px auto;
+    grid-template-columns: 50px auto;
     grid-template-rows: 125px 1fr 50px;
     height: 100vh;
 }
 .topo{
+    position: fixed;
+    width: 100%;
+    height: 125px;
     grid-area: topo;
     background-color: black;
+    z-index: 9999;
 }
 .menulateral{
     grid-area: menulateral;
@@ -23,6 +27,9 @@ body{
 .conteudo{
     grid-area: conteudo;
     background-color: rgb(230, 230, 230);
+    align-items: center;
+    padding-right: 150px;
+    padding-left: 150px;
 }
 .rodape{
     grid-area: rodape;
@@ -39,6 +46,8 @@ body{
     bottom: -20px;
 }
 .image img{
+    position: fixed;
+    top: 20px;
     height: 80px;
     width: 200px;
 }
@@ -52,7 +61,7 @@ body{
 }
 .top{
     color: white;
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -61,17 +70,17 @@ body{
 .rodape a{
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     bottom: -20%;
     font-size: large;
     text-decoration: none;
     color: aqua;
 }
-.lista a{text-decoration: none;
-        color: rgb(0, 180, 180);}
+.lista a{text-decoration: none; color: rgb(0, 180, 180);}
 .lista li{margin: 10px;}
 .lista{
     position: absolute;
+    top: 150px;
     left: 30px;
     list-style: none;
     font-size: 20px;
@@ -85,10 +94,39 @@ body{
     height: fit-content;
     width: fit-content;
     position: relative;
-    left: 50px;
+    left: 50%;
+    transform: translate(-50%);
     color: darkblue;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.subtitle{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 .conteudo p{
     text-indent: 1em;
     margin: 50px;
+    font-size: 25px;
+}
+.hidden {
+    display: none;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    top: 0px;
+  }
+.click{
+    position: fixed;
+    top: 125px;
+    width: 50px;
+    height: 50px;
+    background-color: wheat;
+    border: white;
+    background: url("img/logo-menu.jpg");
+    background-size: contain;
 }
